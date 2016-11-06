@@ -15,6 +15,12 @@ public class Response {
     this.message = message;
   }
 
+  public static Response SUCCESS(Object data){
+    Response response = new Response(200,"success");
+    response.setData(data);
+    return response;
+  }
+
   public int getCode() {
     return code;
   }
